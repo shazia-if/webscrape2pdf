@@ -6,7 +6,7 @@ def fetch_webpage_content(url):
         response = requests.get(url)
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
-            # Extract text from the page, customize based on structure of the article pages
+            # Extracting text from the page, customized based on structure of the article pages
             paragraphs = soup.find_all('p')
             content = '\n'.join([para.get_text() for para in paragraphs])
             return content
