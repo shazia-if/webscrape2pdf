@@ -8,11 +8,13 @@ def save_to_pdf(content, filename, folder):
     pdf.set_font("Arial", size=12)
 
     # Splitting content into lines to fit in PDF
+    #will work on proper formatting in future versions
+    
     lines = content.split('\n')
     for line in lines:
         pdf.multi_cell(0, 10, line)
     
-    # Create folder if it doesn't exist
+    # Creating folder if it doesn't exist to avoid error
     if not os.path.exists(folder):
         os.makedirs(folder)
     
