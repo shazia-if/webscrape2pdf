@@ -5,7 +5,7 @@ import os
 from webscraper import fetch_webpage_content
 from pdf_generator import save_to_pdf
 
-# Function to generate PDFs from the selected CSV and folder
+#generating PDFs from the selected CSV and folder
 def generate_pdfs(csv_file, folder):
     try:
         df = pd.read_csv(csv_file)
@@ -26,7 +26,7 @@ def generate_pdfs(csv_file, folder):
     except Exception as e:
         messagebox.showerror("Error", f"An error occurred: {e}")
 
-# Function to open a file dialog to select a CSV file
+#opening a file dialog to select a CSV file
 def select_csv_file():
     file_path = filedialog.askopenfilename(
         title="Select CSV file",
@@ -35,7 +35,7 @@ def select_csv_file():
     csv_file_entry.delete(0, tk.END)
     csv_file_entry.insert(0, file_path)
 
-# Function to open a directory dialog to select a folder
+#opening a directory dialog to select a folder
 def select_output_folder():
     folder_path = filedialog.askdirectory(title="Select Output Folder")
     folder_entry.delete(0, tk.END)
@@ -52,9 +52,9 @@ def start_processing():
     
     generate_pdfs(csv_file, folder)
 
-# Initialize the main application window
+# Initializing the main application window
 app = tk.Tk()
-app.title("Webpage to PDF Converter")
+app.title("Welcome to WebScrape2PDF")
 
 # Window layout
 # CSV file selection
@@ -72,5 +72,5 @@ tk.Button(app, text="Browse", command=select_output_folder).grid(row=1, column=2
 # Start button
 tk.Button(app, text="Start", command=start_processing, width=20).grid(row=2, column=1, pady=20)
 
-# Run the application
+# Running the application
 app.mainloop()
