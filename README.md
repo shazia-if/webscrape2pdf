@@ -1,7 +1,7 @@
-# webscrape2pdf
+# WebScrape2pdf
 A GUI application written in python to save multiple website data and save them into seperate pdf files locally.
 
-# Instruction to use
+# Instructions to use:
 1. Create a csv file.
 2. Ensure the column names are **"name"** and **"link"**.
 3. Add as many links you want and save the file.
