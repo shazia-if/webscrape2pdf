@@ -1,0 +1,6 @@
+Required libraries:
+1. Beautiful Soup
+2. Requests
+3. fpdf
+4. tkinter
+5. pandas
